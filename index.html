@@ -1,14 +1,211 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#d10b27"><meta name="description" content="Tsara Tôle Européenne : vente de tôles et accessoires. Prix, devis et commandes WhatsApp."><title>Tsara Tôle Européenne | Boutique officielle</title><link rel="stylesheet" href="/style.css"></head><body>
-<div class="announce">TÔLE DE QUALITÉ POUR UN AVENIR SOLIDE · ANTANANARIVO, MADAGASCAR</div>
-<header class="header"><div class="container nav"><a class="brand" href="#"><img src="/logo.jpg" alt="Logo Tsara Tôle"><b>TSARA TÔLE<small>EUROPÉENNE</small></b></a><nav class="links"><a href="#accueil">Accueil</a><a href="#boutique">Boutique</a><a href="#tarifs">Tarifs</a><a href="#calcul">Calculateur</a><a href="#contact">Contact</a></nav><div class="navright"><button class="btn btn-red" id="cartOpen">Panier <span id="cartCount">0</span></button></div></div></header>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b5121b">
+<meta name="description" content="TSARA TOLE EUROPÉENNE - Vente de tôles et produits de couverture à Madagascar.">
+<title>TSARA TOLE EUROPÉENNE</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:#171717}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1160px;margin:auto}
+header{position:sticky;top:0;background:white;z-index:10;box-shadow:0 3px 20px #0001}
+nav{height:75px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Montserrat,sans-serif;font-size:20px;font-weight:900}
+.logo span{color:#b5121b}
+.logo small{display:block;font-size:9px;letter-spacing:3px;color:#777}
+.links{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:700}
+.red{background:#b5121b;color:white;padding:13px 20px;border-radius:5px}
+.hero{min-height:560px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,#111e,#1118),url('https://caculacentermat.com.br/upload/product/CPyzfizWFl2L5PcX153mmqneWPTXEKGOllqjNnOS.jpeg') center/cover}
+.hero-content{max-width:650px;padding:80px 0}
+.tag{background:#b5121b;padding:8px 13px;font-size:11px;font-weight:800;letter-spacing:2px}
+h1{font-family:Montserrat,sans-serif;font-size:clamp(38px,6vw,65px);line-height:1.1;margin:25px 0}
+h1 span{color:#f04a50}
+.hero p{line-height:1.8;color:#eee;max-width:500px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:15px 22px;border-radius:5px;font-size:12px;font-weight:800}
+.btn-red{background:#b5121b;color:white}
+.btn-white{background:white;color:#171717}
+.trust{background:#b5121b;color:white;padding:23px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;text-align:center}
+.trust strong{display:block;font-size:14px}
+.trust span{font-size:11px}
+section{padding:80px 0}
+.heading{text-align:center;margin-bottom:40px}
+.eyebrow{color:#b5121b;font-size:11px;font-weight:900;letter-spacing:3px}
+h2{font-family:Montserrat,sans-serif;font-size:clamp(27px,4vw,38px);margin:12px 0}
+.heading p{color:#777;font-size:14px}
+.products{background:#f7f7f7}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
+.card{background:white;border-radius:9px;overflow:hidden;box-shadow:0 8px 30px #0000000d;transition:.2s}
+.card:hover{transform:translateY(-5px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block;background:#eee}
+.info{padding:21px}
+.info h3{font-family:Montserrat,sans-serif;font-size:17px;margin-bottom:9px}
+.info p{font-size:13px;color:#777;line-height:1.6;min-height:42px}
+.bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #eee;margin-top:17px;padding-top:15px}
+.price{font-size:11px;font-weight:800}
+.order{background:#b5121b;color:white;padding:10px 13px;border-radius:4px;font-size:11px;font-weight:800}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-img{width:100%;height:390px;object-fit:cover;border-radius:9px}
+.about-text p{color:#777;line-height:1.9;font-size:14px;margin:18px 0}
+.features{display:grid;gap:13px;margin:25px 0;font-size:13px;font-weight:700}
+.cta{background:#171717;color:white;text-align:center}
+.cta p{color:#ccc;margin:15px 0 25px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-box{background:#f7f7f7;padding:28px;border-radius:8px}
+.contact-box h3{font-family:Montserrat,sans-serif;margin-bottom:15px}
+.contact-box p{font-size:14px;color:#777;line-height:1.9}
+footer{background:#111;color:white;padding:30px 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+footer p{font-size:12px;color:#aaa}
+.whatsapp{position:fixed;bottom:20px;right:18px;background:#20b75a;color:white;padding:15px 19px;border-radius:50px;font-size:13px;font-weight:800;z-index:20;box-shadow:0 5px 20px #0003}
+@media(max-width:800px){
+.links{gap:12px;font-size:11px}
+.links a:not(.red){display:none}
+.product-grid{grid-template-columns:repeat(2,1fr)}
+.about-grid{grid-template-columns:1fr}
+.about-img{height:300px}
+}
+@media(max-width:520px){
+.product-grid,.contact-grid,.trust-grid{grid-template-columns:1fr}
+section{padding:60px 0}
+.card img{height:230px}
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="container">
+<nav>
+<a href="#home" class="logo">TSARA <span>TOLE</span><small>EUROPÉENNE</small></a>
+<div class="links">
+<a href="#home">Accueil</a>
+<a href="#produits">Produits</a>
+<a href="#apropos">À propos</a>
+<a href="#contact">Contact</a>
+<a class="red" href="https://wa.me/261XXXXXXXXX">Devis gratuit</a>
+</div>
+</nav>
+</div>
+</header>
+
 <main>
-<section class="hero" id="accueil"><div class="container"><div class="hero-content"><img class="hero-logo" src="/logo.jpg" alt="Logo officiel"><div class="badge">Votre partenaire toiture</div><h1>Construisez durablement avec <span>la bonne tôle.</span></h1><p>Tôles transparentes, Galvabac couleur, Aluzinc-Aluminium sur mesure et accessoires. Consultez nos tarifs, composez votre panier et envoyez votre demande de commande en quelques instants.</p><div class="hero-actions"><a class="btn btn-red" href="#boutique">Découvrir la boutique →</a><a class="btn btn-line" href="#calcul">Calculer mon devis</a></div><div class="hero-meta"><span>✓ <strong>Tarifs consultables</strong></span><span>✓ <strong>Devis rapide</strong></span><span>✓ <strong>WhatsApp direct</strong></span></div></div></div></section>
-<div class="container"><div class="features"><div class="feature"><div class="feature-icon">⌂</div><div><b>Solutions toiture</b><small>Plusieurs types et épaisseurs</small></div></div><div class="feature"><div class="feature-icon">▤</div><div><b>Calcul automatique</b><small>Estimation immédiate du panier</small></div></div><div class="feature"><div class="feature-icon">☎</div><div><b>Contact direct</b><small>Échangez avec notre équipe</small></div></div></div></div>
-<section class="section" id="boutique"><div class="container"><div class="section-head"><span class="badge">Catalogue produits</span><h2>Choisissez vos matériaux</h2><p>Parcourez les produits disponibles. Les prix affichés sont ceux communiqués par Tsara Tôle Européenne, sous réserve de confirmation.</p></div><div class="product-tools"><div class="search"><span>⌕</span><input id="search" placeholder="Rechercher un produit..."></div><div class="filters" id="filters"></div></div><div class="grid" id="products"><p>Chargement des produits…</p></div></div></section>
-<section class="section soft" id="tarifs"><div class="container"><div class="section-head"><span class="badge">Grille tarifaire</span><h2>Nos tarifs sur mesure</h2><p>Grille communiquée par l'entreprise. Les prix unitaires des tôles Galvabac et Aluzinc sont à confirmer avec le vendeur.</p></div><div class="price-tables"><div class="table-card"><h3>Galvabac en couleur</h3><table><thead><tr><th>Épaisseur</th><th>Prix indiqué</th></tr></thead><tbody><tr><td>0,20</td><td>14 000 Ar</td></tr><tr><td>0,25</td><td>16 500 Ar</td></tr><tr><td>0,30</td><td>18 400 Ar</td></tr><tr><td>0,35</td><td>24 000 Ar</td></tr><tr><td>0,40</td><td>26 500 Ar</td></tr><tr><td>0,50</td><td>31 000 Ar</td></tr><tr><td>0,60</td><td>40 000 Ar</td></tr></tbody></table></div><div class="table-card"><h3>Aluzinc – Aluminium</h3><table><thead><tr><th>Épaisseur</th><th>Prix indiqué</th></tr></thead><tbody><tr><td>0,18</td><td>12 000 Ar</td></tr><tr><td>0,20</td><td>12 800 Ar</td></tr><tr><td>0,25</td><td>16 000 Ar</td></tr><tr><td>0,30</td><td>18 000 Ar</td></tr><tr><td>0,40</td><td>26 000 Ar</td></tr></tbody></table></div></div><p class="section-head" style="margin:18px auto 0;font-size:12px;color:#777">Tôle transparente : 27 000 Ar / mètre · Option tuile : +5 000 Ar / mètre · Accessoires : 500 Ar (prix communiqué).</p></div></section>
-<section class="section" id="calcul"><div class="container"><div class="section-head"><span class="badge">Devis instantané</span><h2>Calculateur de toiture</h2><p>Calculez une estimation à partir du type de tôle, de l'épaisseur, de la longueur et de la quantité.</p></div><div class="calc-layout"><div class="panel"><h3>Votre sélection</h3><div class="field"><label>Type de produit</label><select id="calcProduct"></select></div><div class="field"><label>Longueur (mètres)</label><select id="calcLength"><option value="2">2 mètres</option><option value="2.5">2,50 mètres</option><option value="3">3 mètres</option><option value="1">1 mètre</option></select></div><div class="field"><label>Quantité</label><input id="calcQty" type="number" min="1" value="1"></div><div class="field" id="tileOption" style="display:none"><label><input id="tile" type="checkbox" style="width:auto"> Option tuile (+5 000 Ar / mètre)</label></div><button class="btn btn-red" id="calcAdd">Ajouter au panier</button></div><div class="estimate"><span class="badge">Votre estimation</span><div class="amount" id="calcTotal">—</div><div class="estimate-row"><span>Prix par mètre / unité</span><b id="calcRate">—</b></div><div class="estimate-row"><span>Longueur / quantité</span><b id="calcDetails">—</b></div><p class="muted">Attention : les tarifs Galvabac et Aluzinc ont été interprétés comme prix par mètre pour permettre une simulation. Confirmez leur unité de facturation avec l'entreprise avant paiement.</p></div></div></div></section>
-<section class="section soft"><div class="container about"><div class="about-logo"><img src="/logo.jpg" alt="Logo Tsara Tôle Européenne"></div><div><span class="badge">Notre engagement</span><h2>La qualité de la toiture commence par le bon choix.</h2><p>Tsara Tôle Européenne accompagne vos projets de couverture avec une gamme de tôles et d'accessoires. Notre boutique facilite la consultation des tarifs et l'envoi de demandes de devis.</p><div class="checks"><div><span>✓</span> Tôles transparentes et tôles sur mesure</div><div><span>✓</span> Galvabac couleur et Aluzinc-Aluminium</div><div><span>✓</span> Demandes de commande via WhatsApp</div></div></div></div></section>
-<section class="section contact" id="contact"><div class="container contact-layout"><div><span class="badge">Parlons de votre projet</span><h2 style="font:800 38px Manrope">Besoin d'un prix ou d'un conseil ?</h2><p>Contactez directement Tsara Tôle Européenne pour confirmer les tarifs, les dimensions sur mesure, le stock et les délais.</p><p>Téléphone / WhatsApp : <a href="https://wa.me/261337535347">+261 33 75 353 47</a><br>WhatsApp : <a href="https://wa.me/261385574790">+261 38 55 747 90</a></p><p>Vous pouvez également nous écrire en message privé sur Facebook.</p></div><div class="panel"><div class="field"><label>Votre nom</label><input id="contactName" placeholder="Nom et prénom"></div><div class="field"><label>Votre téléphone</label><input id="contactPhone" placeholder="Numéro de téléphone"></div><div class="field"><label>Votre message</label><textarea id="contactMessage" rows="3" placeholder="Décrivez votre besoin"></textarea></div><button class="btn btn-red" id="sendContact" style="width:100%">Envoyer sur WhatsApp</button></div></div></section>
-</main><footer class="footer"><div class="container footer-inner"><b>TSARA TÔLE EUROPÉENNE</b><span>© <span id="year"></span> · Tôle de qualité pour un avenir solide.</span><a href="/admin">Espace administration</a></div></footer>
-<div class="drawer-bg" id="drawerBg"></div><aside class="drawer" id="drawer"><div class="drawer-head"><h3>Votre panier</h3><button id="cartClose">✕</button></div><div class="cart-lines" id="cartLines"><div class="empty">Votre panier est vide.</div></div><div class="cart-total"><span>Total estimatif</span><span id="cartTotal">0 Ar</span></div><button class="btn btn-red" id="checkout" style="width:100%">Valider la commande</button><p style="font-size:11px;color:#888">Votre commande sera enregistrée et l'équipe vous contactera pour confirmation.</p></aside><div class="toast" id="toast"></div>
-<script src="/app.js"></script></body></html>
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<span class="tag">QUALITÉ • SOLIDITÉ • CONFIANCE</span>
+<h1>LA QUALITÉ POUR <span>VOTRE TOITURE.</span></h1>
+<p>Découvrez notre gamme de tôles et de solutions de couverture pour vos projets de construction et de rénovation.</p>
+<div class="actions">
+<a class="btn btn-red" href="#produits">DÉCOUVRIR NOS PRODUITS</a>
+<a class="btn btn-white" href="https://wa.me/261XXXXXXXXX">NOUS CONTACTER</a>
+</div>
+</div>
+</div>
+</section>
+
+<div class="trust">
+<div class="container trust-grid">
+<div><strong>PRODUITS DE QUALITÉ</strong><span>Pour vos projets de toiture</span></div>
+<div><strong>PLUSIEURS MODÈLES</strong><span>Un choix selon vos besoins</span></div>
+<div><strong>CONTACT DIRECT</strong><span>Demandez votre devis</span></div>
+</div>
+</div>
+
+<section class="products" id="produits">
+<div class="container">
+<div class="heading">
+<span class="eyebrow">NOTRE CATALOGUE</span>
+<h2>Nos tôles & produits</h2>
+<p>Découvrez nos différents modèles pour votre toiture.</p>
+</div>
+<div class="product-grid">
+
+<article class="card">
+<img src="https://s.alicdn.com/@sc04/kf/Hc32e1729283643c68a5746a891260b19B.png_640x640.png" alt="Tôle galvanisée">
+<div class="info"><h3>Tôle Galvanisée</h3><p>Une solution classique pour différents types de constructions.</p><div class="bottom"><span class="price">Prix sur demande</span><a class="order" href="https://wa.me/261XXXXXXXXX">Commander</a></div></div>
+</article>
+
+<article class="card">
+<img src="https://cpimg.tistatic.com/12266192/b/4/Corrugated-Colour-Roofing-Sheet..jpg" alt="Tôle Galvabac">
+<div class="info"><h3>Tôle Galvabac</h3><p>Un profil adapté aux projets de couverture modernes.</p><div class="bottom"><span class="price">Prix sur demande</span><a class="order" href="https://wa.me/261XXXXXXXXX">Commander</a></div></div>
+</article>
+
+<article class="card">
+<img src="https://www.dachheld24.de/images/product_images/original_images/Trapezblech_T18DR_Aluzink.jpg" alt="Tôle Aluzinc">
+<div class="info"><h3>Tôle Aluzinc</h3><p>Un revêtement métallique apprécié pour la couverture.</p><div class="bottom"><span class="price">Prix sur demande</span><a class="order" href="https://wa.me/261XXXXXXXXX">Commander</a></div></div>
+</article>
+
+<article class="card">
+<img src="https://media.screwfix.com/is/image/ae235/683CY_P" alt="Tôle transparente">
+<div class="info"><h3>Tôle Transparente</h3><p>Pour laisser entrer la lumière naturelle dans vos espaces.</p><div class="bottom"><span class="price">Prix sur demande</span><a class="order" href="https://wa.me/261XXXXXXXXX">Commander</a></div></div>
+</article>
+
+<article class="card">
+<img src="https://image.made-in-china.com/203f0j00AOkcoBlsyVqT/Galvanized-Sheet-Roofing-Corrugated-Steel-Sheet-Zinc-Coated-Galvanized-Corrugated-Steel-Roofing-Sheet.webp" alt="Tôle ondulée">
+<div class="info"><h3>Tôle Ondulée</h3><p>Un profil ondulé pour vos différents besoins de toiture.</p><div class="bottom"><span class="price">Prix sur demande</span><a class="order" href="https://wa.me/261XXXXXXXXX">Commander</a></div></div>
+</article>
+
+<article class="card">
+<img src="https://tiimg.tistatic.com/fp/2/009/035/jsw-roofing-sheets-143.jpg" alt="Tôles colorées">
+<div class="info"><h3>Tôles Colorées</h3><p>Plusieurs possibilités de couleurs pour votre toiture.</p><div class="bottom"><span class="price">Prix sur demande</span><a class="order" href="https://wa.me/261XXXXXXXXX">Commander</a></div></div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="apropos">
+<div class="container about-grid">
+<img class="about-img" src="https://caculacentermat.com.br/upload/product/CPyzfizWFl2L5PcX153mmqneWPTXEKGOllqjNnOS.jpeg" alt="Tôles de couverture">
+<div class="about-text">
+<span class="eyebrow">QUI SOMMES-NOUS ?</span>
+<h2>Votre partenaire pour vos projets de toiture.</h2>
+<p>TSARA TOLE EUROPÉENNE vous accompagne dans le choix de vos tôles et produits de couverture. Notre objectif : vous proposer des solutions adaptées à vos besoins.</p>
+<div class="features">
+<div>✓ Plusieurs modèles de tôles</div>
+<div>✓ Demande de devis facile</div>
+<div>✓ Contact direct avec notre équipe</div>
+</div>
+<a class="btn btn-red" href="https://wa.me/261XXXXXXXXX">PARLER AVEC NOUS</a>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<h2>Un projet de toiture ?</h2>
+<p>Contactez-nous pour obtenir des informations et demander votre devis.</p>
+<a class="btn btn-red" href="https://wa.me/261XXXXXXXXX">DEMANDER UN DEVIS SUR WHATSAPP</a>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="heading"><span class="eyebrow">RESTONS EN CONTACT</span><h2>Contactez-nous</h2><p>Notre équipe est à votre écoute.</p></div>
+<div class="contact-grid">
+<div class="contact-box"><h3>TSARA TOLE EUROPÉENNE</h3><p>Vente de tôles et produits de couverture.<br>Madagascar<br>Contact : WhatsApp</p></div>
+<div class="contact-box"><h3>Demandez votre devis</h3><p>Envoyez-nous votre demande directement sur WhatsApp pour obtenir plus d'informations sur les produits et les prix.</p><br><a class="btn btn-red" href="https://wa.me/261XXXXXXXXX">CONTACTER SUR WHATSAPP</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-inner">
+<a href="#home" class="logo">TSARA <span>TOLE</span><small>EUROPÉENNE</small></a>
+<p>© 2026 TSARA TOLE EUROPÉENNE. Tous droits réservés.</p>
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/261XXXXXXXXX">WhatsApp</a>
+</body>
+</html>
